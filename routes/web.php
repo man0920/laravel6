@@ -23,6 +23,6 @@ Route::get('/', function () {
       'articles' => App\Article ::latest()->get()
     ]);
 });
-Route::get('/articles','ArticlesController@index');
+Route::get('/articles', 'ArticlesController@index');
 
 Route::get('/articles/{article}','ArticlesController@show');
