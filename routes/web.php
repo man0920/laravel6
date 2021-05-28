@@ -13,16 +13,24 @@
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+    Route::get('/', function ()
+     {
+        return view('welcome');
+     }
+    );
 
-  Route ::get('/about', function () {
+    Route ::get('/about', function ()
+    {
+        return view('about',
+         [
+        'articles' => App\Article ::latest()->get()
+         ]);
+    });
 
-    return view('about',[
-      'articles' => App\Article ::latest()->get()
-    ]);
-});
-Route::get('/articles', 'ArticlesController@index');
+    Route::get('/articles', 'ArticlesController@index');
 
-Route::get('/articles/{article}','ArticlesController@show');
+    Route::get('/articles/{article}','ArticlesController@show');
+
+    Route::get('/articles/{article}/edit','ArticlesController@edit');
+
+    Route::get('/articles/{article}/update','ArticlesController@update');
