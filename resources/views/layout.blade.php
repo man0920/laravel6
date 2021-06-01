@@ -20,8 +20,9 @@ Released   : 20140225
 <link href="/default.css" rel="stylesheet" />
 <link href="/fonts.css" rel="stylesheet" />
 
-<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+@yield('head')
 </head>
 <body>
     <div id="header-wrapper">
