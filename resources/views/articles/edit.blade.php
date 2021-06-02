@@ -13,6 +13,7 @@
             <label class="label" for="title">Title</label>
             <div class="control">
                 <input class="input" type="text"  name="title" id="title" value="{{ $article->title }}">
+
             </div>
         </div>
         <div class="field">
